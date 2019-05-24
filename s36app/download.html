@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>s36app</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="s36app">
+    <meta name="Description" content="s36app">
+    <meta name="SiteName" content="s36app">
+    <link href="Styles/main.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="Scripts/jquery.min.js"></script>
+    <link href="Styles/swiper.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/swiper.min.js"></script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+</head>
+
+
+<style>
+    html, body {position: relative;height: 100%;}
+    .swiper-container {width: 100%;height: 100%;max-width: 736px;background: url(Images/mobile_bg.png) no-repeat;background-size: cover;}
+    .swiper-containerX {width: 100%;height: 100%;}
+    .swiper-slide {text-align: center;}
+    .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom:12%;left: 0;width: 100%;}
+
+    /*IOS*/
+    /* .ios-section {transform: translate(0, 25%);} */
+    .ios-section .head-section:after {background: rgba(144, 144, 144, 0.5);content: '';display: inline-block;height: 1px;margin-top: 0;width: 6em;}
+    .head-section .iosPicMini {width: 150px;height: 150px;background-size: contain;background-image: url('./Images/icon_ios_mini.png');background-repeat: no-repeat;position: relative;margin: 0 auto;top: 0;margin-top: 5px;margin-bottom: 5px;}
+    .head-section,
+    .ios-instruction {color: #fff;}
+    .head-section h2 {font-size: 30px;font-weight: normal;} 
+    .ios-instruction {margin-top: 2%;}
+    .ios-instruction h2 {font-size: 18px;font-weight: 100;}
+    .ios-instruction ul {text-align: left;margin: 0 auto;display: block;width: 85%;}
+    .ios-instruction ul li {margin: 5px 0;}
+
+    /*Android*/
+    .android-section {transform: translate(0, 20%);}
+    .head-section:after {background: rgba(144, 144, 144, 0.5);content: '';display: inline-block;height: 1px;margin-top: 1.5em;width: 6em;}
+    .head-section .androidPicMini {width: 150px;height: 150px;background-size: contain;background-image: url('./Images/icon_android_mini.png');background-repeat: no-repeat;position: relative;margin: 0 auto;top: 0;margin-top: 15px;margin-bottom: 10px;}
+    .head-section,
+    .android-instruction {color: #fff;}
+    .head-section h2 {font-size: 30px;font-weight: normal;} 
+    .android-instruction {margin-top: 5%;}
+    .android-instruction h2 {font-size: 18px;font-weight: 100;}
+    .android-instruction ul {text-align: left;margin: 0 auto;display: block;width: 70%;}
+    .android-instruction ul li {margin: 10px 0;}
+
+    #footer {position: absolute;bottom: 0;background-color: #7a7a7a;color: #fff;text-align: center;}
+    #footer .precaution {font-size: 12px;padding: 0 10px;}
+    #footer .precaution li {text-align: left; padding-bottom: 10px;}
+
+
+    
+
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper img-y">
+            <div class="swiper-slide ov">
+                <div style="height:80%;"><img src="Images/bananer_download.png" /></div>
+                <div class="s-icon" id="share-btn"><img src="Images/icon01.png" /></div>
+                <div class="btn_download">
+                    <div class="links"><a id="ios-button" href="#"><img src="Images/btn-download_ios.png" /></a></div>
+                    <div class="links"><a id="android-button" href="#"><img src="Images/btn-download_android.png" /></a></div>
+                </div>
+                <div class="down down_c">
+                    <div class="nextb-y"><a id="down-slide">下滑查看安装教程</a></div>
+                </div>
+            </div>
+
+            <div class="swiper-slide ov">
+                <div class="android-section">
+                    <div class="head-section">
+                        <h2>Q1：安卓如何安装？</h2>
+                        <div class="androidPicMini"></div>
+                    </div>
+                    <div class="android-instruction">
+                        <h2>安卓如何安装</h2>
+                        <ul>
+                            <li>1.下载前请先至“设定”→“安全性”→开启“未知来源” </li>
+                            <li>2.点击“下载按钮”并同意开始安装 </li>
+			    <li>3.当安装完成时点击“打开按钮”进入APP </li>
+			    <li>* 如果您无法更新到最新版本，请先卸载后再重新安装。</li>
+                        </ul>
+                    </div>
+                </div> <!--END of android-section-->
+                <div class="down-android">
+                    <div class="nextb-y"><a id="down-slide2">下滑查看苹果版</a></div>
+                </div>
+            </div><!--END of swiper-slide ov-->
+
+            <div class="swiper-slide ov">
+                <div class="ios-section">
+                    <div class="head-section">
+                        <h2>Q2：苹果如何安装？</h2>
+                        <div class="iosPicMini"></div>
+                    </div>
+                    <div class="ios-instruction">
+                        <h2>苹果如何安装</h2>
+                        <ul>
+			    
+                            <li>1.安装后请至“设置”→“通用”→“设备管理”</li>
+                            <li>2.点击"企业级应用" 沙龙会s36企业级应用名称为「NITSA,OOO」</li>
+                            <li>3.点击「“企业级应用名称”」→设置信任</li>
+                            <li>4.返回手机主屏→开启APP</li>
+                        </ul>
+                    </div>
+                </div> <!--END of ios-section-->
+                <div id="footer">
+                    <div class="precaution">
+                        <p>注意事项</p>
+                        <li>首次验证应用完毕后，您的设备必须定期重新验证以保持受信任状态。如果您未能重新验证，可能会看到验证即将过期的提示信息。若您要保持受信任状态，请您将设备连接到互联网， 并点击“验证应用”按钮。  </li>
+                        <li>如果您在建立信任时未连接到互联网，设备将显示“尚未验证”。请您将设备连接到互联网，并点击  “验证应用”按钮。</li>
+                        <li>如果您不能更新到最新版本，请尝试卸载旧版本后重新安装。 </li>
+                    </div>
+                </div>
+            </div><!--END of swiper-slide ov-->
+
+
+
+        </div>
+
+        <img id="landscape" src="Images/landscape.png" style="display: none;">
+    </div>
+
+    <script>
+        var myswiper = new Swiper('.swiper-container', {
+            direction: 'vertical'
+        });
+        
+        $( document ).ready(function() {
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                }
+            };
+
+            if(isMobile.iOS()){
+                $('#ios-button').on('click',function(){
+                    myswiper.slideTo(2);
+                });
+
+                $('#android-button').on('click',function(){
+                    myswiper.slideTo(2);
+                });
+
+                $("#ios-button").attr("href", "app/db1c0a1b-bbeb-42a8-8e23-79364eefdfc0.mobileprovision")
+                $("#android-button").attr("href", "app/db1c0a1b-bbeb-42a8-8e23-79364eefdfc0.mobileprovision")
+
+
+            } else if(isMobile.Android()) {
+                $('#android-button').on('click',function(){
+                    myswiper.slideTo(1);
+                });
+
+                $('#ios-button').on('click',function(){
+                    myswiper.slideTo(1);
+                });
+
+                $("#android-button").attr("href", "app/s36.apk")
+                $("#ios-button").attr("href", "app/s36.apk")
+
+            } else {
+                $('#ios-button').on('click',function(){
+                    myswiper.slideTo(2);
+                });
+                $('#android-button').on('click',function(){
+                    myswiper.slideTo(1);
+                });
+            }
+
+            $('#down-slide').on('click',function(){
+                myswiper.slideTo(1);
+            });
+            $('#down-slide2').on('click',function(){
+                myswiper.slideTo(2);
+            });
+
+        });
+    </script>
+
+    <script>
+        var btnShare = document.getElementById('share-btn');
+
+        btnShare.addEventListener('click', function (ev) {
+
+            if (navigator.share !== undefined) {
+
+                // Share it!
+                navigator.share({
+                title: document.title,
+                url: window.location.href,
+                }).then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing:', error));
+
+                ev.preventDefault();
+            } else {
+                supported.innerHTML = "Unfortunately, this feature is not supported on your browser";
+            }
+
+        });
+
+
+    
+    </script>
+</body>
+</html>

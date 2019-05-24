@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>s36app</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="s36app">
+    <meta name="Description" content="s36app">
+    <meta name="SiteName" content="s36app">
+    <link href="Styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/swiper.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/slides.min.jquery.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $('#slides').slides({
+                    preload: true,
+                    preloadImage: 'Images/loading.gif',
+                    play: false,
+
+                });
+            });
+        })(jQuery);
+        (function ($) {
+            $(function () {
+                $('#slides2').slides({
+                    preload: true,
+                    preloadImage: 'Images/loading.gif',
+                    play: false,
+                });
+            });
+        })(jQuery);
+        $(function () {
+            /*jQuery=$=alert;*/
+            $('.m-tabs a.m_tab0').click(function () {
+                var idd = $(this).attr('href');
+
+                if ($(idd).hasClass('m-tabs_content')) //First Level
+                {
+                    $('.m-tabs_content').hide();
+                    $(idd).fadeIn();
+                    $(idd).find('.m-tabs ul li:first a').click();
+                    $('.m-tabs:first ul li a.active').removeClass('active');
+                    $(this).addClass('active');
+
+                }
+                else if ($(idd).hasClass('tab_content_inner')) //Second Level
+                {
+                    $('.tab_content_inner').hide();
+                    $(idd).fadeIn();
+                    $(idd).find('.m-tabs ul li:first a').click();
+                    $(this).parent().siblings().find('a.active').removeClass('active');
+                    $(this).addClass('active');
+
+                } else if ($(idd).hasClass('tab_content_inner_inner')) //3rd Level
+                {
+                    $('.tab_content_inner_inner').hide();
+                    $(idd).fadeIn();
+                    $(this).parent().siblings().find('a.active').removeClass('active');
+                    $(this).addClass('active');
+                }
+                return false;
+            });
+            $('.m-tabs:first ul li:first a').click();
+
+        });
+    </script>
+</head>
+
+
+<style>
+    html, body {position: relative;height: 100%;background-color:#202020;}
+    a {border: 0;text-decoration: none;}
+    a:focus {outline: none;}
+    .swiper-container {width: 100%;height: 100%;background: url(Images/mobile_bg.png) no-repeat;background-size: cover;}
+    .swiper-containerX {width: 100%;height: 100%;}
+    .swiper-slide {text-align: center;}
+    .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {top:14%;left: 0;width: 100%;}
+</style>
+
+<body>
+    <div class="pc-container">
+        <div class="header">
+            <div style="display:inline-block;width:60%;text-align:left">
+                <ul>
+                    <li class="logo"><img src="Images/pc_logo.gif" /></li>
+                    <li style="padding-left:16px;"><img src="Images/pc_android.png" /></li>
+                    <li><img src="Images/pc_ios.png" /></li>
+                </ul>
+            </div>
+            <div style="display:inline-block;width:39%;text-align:right">
+                <ul>
+                    <li style="padding-right:8px;"><a href="https://www.3636056.com/QuickRegister.aspx" target="_blank"><img src="Images/pc_register-btn.png" /></a></li>
+                    <li><a href="https://www.s36.chat/" target="_blank"><img src="Images/pc_chat-btn.png" /></a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="main">
+                <div id ="one" class="di-b" style="width:486px">
+                    <img src="Images/pc_step1.png" style="padding-bottom:6px;"/>
+                    <img src="Images/pc_step2.png" style="padding-bottom:30px;"/>            
+                </div>
+                <div id="two" class="di-b mobile" style="width:500px;">
+                    <div style="color:#feb902;font-size:20px;text-align:left;font-weight:500;">安装教程 </div>
+                    <div class="m-tabs">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#parent_tab1" class="m_tab0">
+                                    苹果版本
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#parent_tab2" class="m_tab0">
+                                    安卓版本
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="parent_tab1" class="m-tabs_content">
+                        <div id="slides">
+                            <div class="slides_container">
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg1.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg2.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg3.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg4.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg5.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg6.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg7.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg8.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg9.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_iosimg10.png" />
+                                </a>
+                            </div>
+                            <a href="#" class="prev"></a>
+                            <a href="#" class="next"></a>
+                        </div>
+                    </div>
+                    <div id="parent_tab2" class="m-tabs_content">
+                        <div id="slides2">
+                            <div class="slides_container">
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg1.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg2.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg3.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg4.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg5.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg6.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="Images/s36app_andriodimg7.png" />
+                                </a>
+                            </div>
+                            <a href="#" class="prev"></a>
+                            <a href="#" class="next"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">沙龙会s36版权所有 ©2009-2019</div>
+    </div>
+
+        <style>
+        a.qq-contact {display: block;padding: .13rem 10px;position: absolute;bottom: 8px;right: 0;}
+	    a.qq-contact img {height: auto !important;margin-bottom: .05rem;max-width: unset;width: 15% !important;margin-top: 3px;float: right;}
+        </style>
+
+    <!--MOBILE-->
+    <div class="swiper-container mobile-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide img-y" style="text-align:center;">
+                <div class="chat"><img src="Images/chat.png" onclick="window.open('https://www.s36.chat/','_blank');" /></div>
+                <div class="logo"><img src="Images/logo.png" /></div>
+                <div class="m-banner">
+                    <img src="Images/banner-atletico.png" onclick="window.open('https://mp.weixin.qq.com/s/EQGGBkMnTxTtNgOtdi5F8A','_blank');" />
+                </div>
+                <div style="height:16%;padding:2% 0;"><img src="Images/app.png" /></div>
+                <div style="height:7%;padding:1% 0"><img src="Images/button_home.gif" onclick="window.open('download.html','_blank');" /></div>
+                <div style="height:12%;padding:1% 0"><img src="Images/textb.png" /></div>
+                <div class="down">
+                    <div class="rated"><img src="Images/rated18.png"/></div>
+                    <div class="next-y">下滑查看更多</div>
+                    <a target="_blank" href="https://t.cn/Eyl0oIJ" class="qq-contact">
+                        <img  src="Images/wechat.gif" />
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-containerX">
+                    <div class="chat"><img src="Images/chat.png" onclick="window.open('https://www.s36.chat/','_blank');" /></div>
+                    <div class="swiper-wrapper img-y">
+                        <div class="swiper-slide ov">
+                            <div class="img-h">
+                                <img src="Images/home_banner01.png" />
+                                <div class="btn-img"><img src="Images/button.gif" onclick="window.open('download.html','_blank');" /></div>
+                            </div>
+                            <div class="down down_b">
+                                <div class="rated"><img src="Images/rated18.png" /></div>
+                                <div><a href="https://m.s36.com/">访问手机网页版</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-h">
+                                <img src="Images/home_banner02.png" />
+                                <div class="btn-img"><img src="Images/button.gif" onclick="window.open('download.html','_blank');" /></div>
+                            </div>
+                            <div class="down down_b">
+                                <div class="rated"><img src="Images/rated18.png" /></div>
+                                <div><a href="https://m.s36.com/">访问手机网页版</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-h">
+                                <img src="Images/home_banner03.png" />
+                                <div class="btn-img"><img src="Images/button.gif" onclick="window.open('download.html','_blank');" /></div>
+                            </div>
+                            <div class="down down_b">
+                                <div class="rated"><img src="Images/rated18.png" /></div>
+                                <div><a href="https://m.s36.com/">访问手机网页版</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-h">
+                                <img src="Images/home_banner04.png" />
+                                <div class="btn-img"><img src="Images/button.gif" onclick="window.open('download.html','_blank');" /></div>
+                            </div>
+                            <div class="down down_b">
+                                <div class="rated"><img src="Images/rated18.png" /></div>
+                                <div><a href="https://m.s36.com/">访问手机网页版</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-h">
+                                <img src="Images/home_banner05.png" />
+                                <div class="btn-img"><img src="Images/button.gif" onclick="window.open('download.html','_blank');" /></div>
+                            </div>
+                            <div class="down down_b">
+                                <div class="rated"><img src="Images/rated18.png" /></div>
+                                <div><a href="https://m.s36.com/">访问手机网页版</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+
+                    <div  class="wechat-div" style="position: absolute;bottom: 0;z-index:999;">
+
+                        <input type="text" value="s36cs1" id="myInput" style="color: transparent">
+
+                        <a id="p2" target="_blank" href="https://t.cn/Eyl0oIJ">
+                            <img src="Images/wechat-bottom.png" />
+                        </a>
+                    </div>
+
+                   
+                    
+                </div>
+            </div>
+        </div>
+
+        <img id="landscape" src="Images/landscape.png" style="display: none;">
+    </div>
+    <!--MOBILE-->
+
+
+
+    <script type="text/javascript" src="Scripts/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+        });
+        var swiper = new Swiper('.swiper-containerX', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+	  	
+        });
+    </script>
+   
+</body>
+</html>
